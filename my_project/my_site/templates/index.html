@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body>
+
+    <a href="/create" class="button">Разместить объявление</a>
+    {% for advert in adverts %}
+    <div class="card">
+        <img class="card-img" src="{{ advert.img }}"> 
+        <a class="card-title" href="">{{advert.title}}</a>
+        <div class="card-price">{{advert.price}} руб</div>
+    </div>
+    {% endfor %}  
+</body>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Manrope:wght@200..800&display=swap');
+</style>
+<style>
+    .card {
+        width: 208px;
+    }
+    .card * {
+        display: block;
+    }
+    
+    .card-img {
+        width: 208px;
+        height: 165px;
+    }
+
+    .card-title {
+        font-family: "Manrope";
+        font-weight: 700;
+        font-size: 14px;
+        color: #0099F7;
+        text-decoration: none;
+        padding-top: 8px;
+    }
+
+    .card-title:hover {
+        color: #ff6163;
+    }
+
+    .card-price {
+        font-family: "Manrope";
+        font-weight: 700;
+    }
+
+    .button {
+        padding: 10px;
+        display: inline-block;
+        color: #FFF;
+        background-color: #0099F7;
+        text-decoration: none;
+        font-family: "Manrope";
+        font-weight: 500;
+        border-radius: 15px;
+    }
+
+    
+</style>
+
+</html>
